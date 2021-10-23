@@ -9,7 +9,7 @@
         </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:whiteSpace value="collapse"/>
-            <xs:pattern value="/.*/[ix]*"/>
+            <xs:pattern value="/.*/[ixs]*"/>
         </xs:restriction>
     </xs:simpleType>
 
