@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://colorer.sf.net/2003/hrc" targetNamespace="http://colorer.sf.net/2003/hrc" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://colorer.github.io/schema/v1/hrc" targetNamespace="http://colorer.github.io/schema/v1/hrc" elementFormDefault="qualified">
 
     <xs:simpleType name="REstring">
         <xs:annotation>
