@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema
-        xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        xmlns="http://colorer.github.io/schema/v1/catalog"
-        targetNamespace="http://colorer.github.io/schema/v1/catalog"
-        elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://colorer.github.io/schema/v1/catalog" targetNamespace="http://colorer.github.io/schema/v1/catalog" elementFormDefault="qualified">
 
-    <xs:element name="catalog" type="catalog"/>
+    <xs:element name="catalog" type="catalog" />
 
     <xs:complexType name="catalog">
         <xs:annotation>
@@ -14,8 +10,8 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="hrc-sets" type="hrc-sets"/>
-            <xs:element name="hrd-sets" type="hrd-sets"/>
+            <xs:element name="hrc-sets" type="hrc-sets" />
+            <xs:element name="hrd-sets" type="hrd-sets" />
         </xs:sequence>
     </xs:complexType>
 
@@ -27,7 +23,7 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="location" type="location" maxOccurs="unbounded"/>
+            <xs:element name="location" type="location" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 
@@ -40,7 +36,7 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="hrd" type="hrd-entry" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="hrd" type="hrd-entry" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 
@@ -51,7 +47,7 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="location" type="location" maxOccurs="unbounded"/>
+            <xs:element name="location" type="location" maxOccurs="unbounded" />
         </xs:sequence>
         <xs:attribute name="class" type="xs:NMTOKEN" use="required">
             <xs:annotation>
@@ -83,7 +79,7 @@
                 or absolute URI with or without URI schema specification.
             </xs:documentation>
         </xs:annotation>
-        <xs:attribute name="link" type="xs:string" use="required"/>
+        <xs:attribute name="link" type="xs:string" use="required" />
     </xs:complexType>
 
 </xs:schema>
