@@ -189,7 +189,7 @@
         </xs:annotation>
         <xs:sequence>
             <xs:element name="annotation" type="annotation" minOccurs="0"/>
-            <xs:element name="location" type='location' minOccurs="1" maxOccurs="1"/>
+            <xs:element name="location" type='location' minOccurs="0"/>
             <xs:element name="filename" type="filename" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="firstline" type="firstline" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="parameters" type="parameters" minOccurs='0'/>
@@ -250,7 +250,7 @@
         </xs:annotation>
         <xs:simpleContent>
             <xs:extension base="REstring">
-                <xs:attribute name="weight" type="xs:decimal" default="1">
+                <xs:attribute name="weight" type="xs:decimal" default="2">
                     <xs:annotation>
                         <xs:documentation>
                             This attribute defines weight, added to the total language
@@ -273,7 +273,7 @@
         </xs:annotation>
         <xs:simpleContent>
             <xs:extension base="REstring">
-                <xs:attribute name="weight" type="xs:decimal" default="2">
+                <xs:attribute name="weight" type="xs:decimal" default="1">
                     <xs:annotation>
                         <xs:documentation>
                             This attribute defines weight, added to the total language
