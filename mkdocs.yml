@@ -1,5 +1,14 @@
 site_name: Colorer Library
 site_url: https://colorer.github.io/
+
+nav:
+  - Home: index.md
+  - Getting started:
+    - Schemes library: catalog-base.md
+  - Advanced usage:
+    - Catalog.xml: catalog-xml.md
+    - Type of paths: file-paths.md
+
 theme:
   name: material
   palette: 
@@ -24,3 +33,5 @@ markdown_extensions:
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
+  - admonition
+  - pymdownx.details
