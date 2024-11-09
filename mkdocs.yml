@@ -1,8 +1,17 @@
 site_name: Colorer Library
 site_url: https://colorer.github.io/
 
+# Repository
+repo_name: colorer/Colorer-library
+repo_url: https://github.com/colorer/Colorer-library
+
 nav:
   - Home: index.md
+  - Usage:
+    - usage/index.md
+    - Far Manager: usage/farmanager.md
+    - far2l: usage/far2l.md
+    - colorer tools: usage/colorer-tools.md
   - Getting started:
     - Schemes library: catalog-base.md
   - Advanced usage:
