@@ -1,6 +1,9 @@
 # Colorertools
 
-Конольная программа для работы с возможностями библиотеки.
+Консольная программа для работы с возможностями библиотеки. 
+Все версии можно скачать на [странице релизов](https://github.com/colorer/Colorer-library/releases).
+
+Описание приведено для версий, начиная с 1.5.0.
 
 ```
 Usage: colorer (command) (parameters) (logging parameters) [<filename>]
@@ -13,9 +16,10 @@ Usage: colorer (command) (parameters) (logging parameters) [<filename>]
   -ht        Generates plain coloring from <filename> using tokens output
   -v         Runs viewer on file <fname> (uses 'console' hrd class)
   -p<n>      Runs parser in profile mode (if <n> specified, makes <n> loops)
-  -f         Forwards input file into output with specified encodings
  Parameters:
   -c<path>   Uses specified 'catalog.xml' file
+  -cs<path>  Uses specified 'hrcsettings.xml' file
+  -cu<path>  Load user hrc-files from path
   -i<name>   Loads specified hrd rules from catalog
   -t<type>   Tries to use type <type> instead of type autodetection
   -ls<name>  Use file <name> as input linking data source for href generation
@@ -39,8 +43,10 @@ Usage: colorer (command) (parameters) (logging parameters) [<filename>]
 * Класс стиля раскраски при преобразовании в реальные цвета (Style) по умолчанию "rgb".
 * Класс стиля раскраски при преобразовании в текстовое представление (Text) по умолчанию "text".
 * Если не задано имя стиля раскраски, то проверяется переменная окружения **COLORER_HRD**. Если и там пусто, то используется "default" стиль.
+* Если не задан путь до hrcsettings.xml, то производится поиск в переменной окружения **COLORER_HRC_SETTINGS**. Если там пусто, то работа продолжается.
 
 ### Переменные окружения
 
 * **COLORER_CATALOG** - путь до catalog.xml. Обрабатывается только в случае если не задан путь через параметры.
 * **COLORER_HRD** - имя стиля раскраски. Обрабатывается только в случае если не задан через параметры.
+* **COLORER_HRC_SETTINGS** - путь до hrcsettings.xml. Обрабатывается только в случае если не задан путь через параметры.
