@@ -18,6 +18,7 @@ nav:
     - Catalog.xml: advanced/catalog-xml.md
     - Type of paths: advanced/file-paths.md
     - Customization: advanced/custom.md
+    - HrcSettings.xml: advanced/hrcsettings.md
 
 theme:
   name: material
