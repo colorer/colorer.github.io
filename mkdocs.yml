@@ -15,8 +15,8 @@ nav:
   - Getting started:
     - Schemes library: catalog-base.md
   - Advanced usage:
-    - Catalog.xml: catalog-xml.md
-    - Type of paths: file-paths.md
+    - Catalog.xml: advanced/catalog-xml.md
+    - Type of paths: advanced/file-paths.md
 
 theme:
   name: material
