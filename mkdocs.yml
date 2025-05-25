@@ -17,6 +17,7 @@ nav:
   - Advanced usage:
     - Catalog.xml: advanced/catalog-xml.md
     - Type of paths: advanced/file-paths.md
+    - Customization: advanced/custom.md
 
 theme:
   name: material
