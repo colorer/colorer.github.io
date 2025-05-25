@@ -1,22 +1,21 @@
 # FarColorer
 
-FarColorer - плагин подсветки синтаксиса в редакторе [Far Manager](https://farmanager.com/).
+FarColorer – это плагин, обеспечивающий подсветку синтаксиса в текстовом редакторе файлового менеджера [Far Manager](https://farmanager.com/).
 
-Плагин входит в дистрибутив Far Manager начиная с версии v3.0.2948.
+Плагин включен в официальный дистрибутив Far Manager, начиная с версии v3.0.2948.
 
-* Исходный код - [https://github.com/colorer/FarColorer](https://github.com/colorer/FarColorer)
-* Сборки - [https://github.com/colorer/FarColorer/releases](https://github.com/colorer/FarColorer/releases)
-* Обсуждение на форуме - [Colorer — гибкая раскраска синтаксиса в редакторе и др.](https://forum.farmanager.com/viewtopic.php?p=179185)
+* **Исходный код:** [https://github.com/colorer/FarColorer](https://github.com/colorer/FarColorer)
+* **Сборки (релизы):** [https://github.com/colorer/FarColorer/releases](https://github.com/colorer/FarColorer/releases)
+* **Обсуждение на форуме Far Manager:** [Colorer — гибкая раскраска синтаксиса в редакторе и др.](https://forum.farmanager.com/viewtopic.php?p=179185)
 
-## Типы сборок FarColorer
+## Варианты сборок FarColorer
 
-Плагин имеет два варианта сборки:
+Плагин FarColorer поставляется в двух вариантах сборки, различающихся механизмом обработки строк:
 
-* **legacy** - для работы с строками применяется внутренняя реализация, использующаяся в Colorer с первых версий.
-* **modern** - для работы с строками применяется библиотека ICU.
+* **legacy**: Использует для обработки строк внутреннюю реализацию, применявшуюся в Colorer с ранних версий. Этот вариант обеспечивает совместимость со старыми операционными системами, такими как Windows XP.
+* **modern**: Использует библиотеку [ICU (International Components for Unicode)](https://icu.unicode.org/) для обработки строк, что обеспечивает улучшенную поддержку Unicode и интернационализации.
 
-**Legacy** версия поддерживает работу на старых платформах, таких как Windows XP.
+В официальную поставку Far Manager включена **modern**-версия плагина.
 
-В поставке Far Manager используется **modern** версия.
+Оба варианта сборок доступны для загрузки на [странице релизов](https://github.com/colorer/FarColorer/releases).
 
-Все версии можно скачать на [странице релизов](https://github.com/colorer/FarColorer/releases). 

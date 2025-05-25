@@ -1,11 +1,14 @@
 # FarColorer для far2l
 
-В клоне Far Manager 2 для Linux - [far2l](https://github.com/elfmz/far2l) - так же используется плагин для редактора FarColorer.
+Порт Far Manager 2 для Linux и macOS, известный как [far2l](https://github.com/elfmz/far2l), также включает плагин FarColorer для подсветки синтаксиса в своем редакторе.
 
-* Исходный код - включены в исходники far2l [https://github.com/elfmz/far2l](https://github.com/elfmz/far2l)
-* Сборки - отдельных сборок не делается, все в рамках far2l [https://github.com/elfmz/far2l/releases](https://github.com/elfmz/far2l/releases)
-* Обсуждение - в различных сообществах far2l
+* **Исходный код:** Интегрирован в основной репозиторий far2l: [https://github.com/elfmz/far2l](https://github.com/elfmz/far2l)
+* **Сборки (релизы):** Поставляется как часть официальных сборок far2l: [https://github.com/elfmz/far2l/releases](https://github.com/elfmz/far2l/releases)
+* **Обсуждение:** Происходит в рамках сообществ, посвященных far2l.
 
-## Отличия от Windows сборок
-- По умолчанию в исходниках far2l отключена работа Colorer Library с архивами. Библиотека схем поставляется всегда в распакованном виде.
-- Нет консольного просмотрщика `clr:имя_файла`
+## Ключевые отличия от версии для Windows
+
+Версия FarColorer для far2l имеет следующие особенности:
+
+- **Поддержка архивов библиотек схем:** По умолчанию отключена. Библиотека HRC-схем для far2l всегда используется в распакованном (unpacked) виде.
+- **Консольный просмотрщик:** Отсутствует функционал быстрого просмотра файла с подсветкой через префикс `clr:<имя_файла>` в командной строке Far Manager.
