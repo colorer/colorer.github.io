@@ -598,7 +598,16 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Полный путь
+      Абсолютный (полный) путь
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Длинные пути (Windows)
     </span>
   </a>
   
@@ -607,7 +616,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Длинный путь
+      Относительный путь
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zip-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Файл внутри ZIP-архива
     </span>
   </a>
   
@@ -616,34 +634,16 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Относительный путь
+      Использование переменных окружения
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#xml-external-entities" class="md-nav__link">
     <span class="md-ellipsis">
-      Файл в архиве
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      Переменные окружения
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xml-external-entity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Пути в xml external entity
+      Особенности указания путей в XML External Entities
     </span>
   </a>
   
@@ -740,7 +740,16 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Полный путь
+      Абсолютный (полный) путь
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Длинные пути (Windows)
     </span>
   </a>
   
@@ -749,7 +758,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Длинный путь
+      Относительный путь
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zip-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Файл внутри ZIP-архива
     </span>
   </a>
   
@@ -758,34 +776,16 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Относительный путь
+      Использование переменных окружения
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#xml-external-entities" class="md-nav__link">
     <span class="md-ellipsis">
-      Файл в архиве
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      Переменные окружения
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xml-external-entity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Пути в xml external entity
+      Особенности указания путей в XML External Entities
     </span>
   </a>
   
@@ -810,10 +810,10 @@
   
 
 
-<h1 id="_1">Форматы путей файлов</h1>
-<p>В Colorer Library для указания пути до файла или папки могут использоваться различные возможности: относительные пути, архивы, переменные окружения. В том числе такие пути поддерживаются в библиотеке схем (файлы xml, hrc, hrd).</p>
-<h2 id="_2">Полный путь</h2>
-<p>Обычный полный путь до файла на файловой системе. Например</p>
+<h1 id="_1">Форматы путей к файлам и каталогам</h1>
+<p>Colorer Library поддерживает несколько форматов и механизмов для указания путей к файлам и каталогам. Это абсолютные и относительные пути, ссылки на файлы внутри ZIP-архивов и использование переменных окружения. Данные форматы применимы при указании местоположения файлов в конфигурационных XML-файлах (например, в catalog.xml), а также внутри HRC- и HRD-файлов (например, для импорта других схем или указания на внешние ресурсы).</p>
+<h2 id="_2">Абсолютный (полный) путь</h2>
+<p>Это стандартный полный путь к файлу или каталогу в файловой системе операционной системы. Например:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="_2-windows" name="__tabbed_1" type="radio" /><input id="_2-linux" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="_2-windows">Windows</label><label for="_2-linux">Linux</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -826,70 +826,62 @@
 </div>
 </div>
 </div>
-<h2 id="_3">Длинный путь</h2>
-<p>В Windows поддерживается работа с <a href="https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=registry">длинными путями</a>. Полный путь может быть указан через <code>\\?\</code>, например <code>\\?\c:\user\test\1.xml</code></p>
-<h2 id="_4">Относительный путь</h2>
-<p>Путь считается относительным, если:</p>
+<h2 id="windows">Длинные пути (Windows)</h2>
+<p>Для операционной системы Windows Colorer Library поддерживает специальный префикс <code>\\?\</code> для работы с путями, превышающими стандартное ограничение MAX_PATH. Это позволяет обращаться к файлам и каталогам с очень длинными именами или глубокой вложенностью. Пример: <code>\\?\C:\Very long path\Another very long path segment\...\file.txt</code></p>
+<h2 id="_3">Относительный путь</h2>
+<p>Относительный путь указывает местоположение файла или каталога относительно другого, "базового" пути. В контексте Colorer Library базовым путем обычно является местоположение файла, в котором данный относительный путь указан (например, catalog.xml или HRC-файл).</p>
+<p>Путь считается относительным, если он не является абсолютным (т.е. не начинается с корневого каталога или буквы диска в Windows) и может содержать специальные обозначения, такие как <code>.</code> (текущий каталог) и <code>..</code> (родительский каталог).</p>
+<p><strong>Пример:</strong> Если в файле <code>C:\projects\my_project\config\catalog.xml</code> указан относительный путь <code>../schemas/main.hrc</code>, то он будет разрешен в абсолютный путь <code>C:\projects\my_project\schemas\main.hrc</code>.</p>
+<h2 id="zip-">Файл внутри ZIP-архива</h2>
+<p>Colorer Library позволяет обращаться к файлам, находящимся внутри <strong>ZIP-архивов</strong>. Это особенно удобно для распространения библиотек схем, которые могут содержать большое количество HRC и HRD файлов.</p>
+<p>Синтаксис пути к файлу внутри архива следующий:</p>
+<p><code>jar:путь_до_архива!путь_до_файла_в_архиве</code></p>
+<p>Где:</p>
 <ul>
-<li>не содержит указания на диск (Windows)</li>
-<li>не начинается с корня (Linux)</li>
-<li>в пути встречаются ссылки на текущую папку <code>./</code> или на родительскую <code>../</code></li>
+<li><code>jar:</code>– специальный префикс, указывающий на использование ZIP-архива. (Примечание: префикс <code>jar</code> является историческим наследием, так как JAR-файлы в Java являются ZIP-архивами).</li>
+<li><code>&lt;путь_к_ZIP_архиву&gt;</code> – путь к самому ZIP-файлу. Этот путь может быть абсолютным, относительным или использовать переменные окружения (см. ниже).</li>
+<li><code>!</code> – разделитель между путем к архиву и путем внутри архива.</li>
+<li><code>&lt;путь_к_файлу_внутри_архива&gt;</code> – путь к целевому файлу или каталогу внутри структуры ZIP-архива.</li>
+<li><strong>Пример:</strong> <code>jar:schemes.zip!languages/cplusplus.hrc</code></li>
 </ul>
-<p>Полный путь до файла рассчитывается относительно файла, в котором указан относительный путь. Т.е. если путь <code>..\1.xml</code> указан в файле <code>c:\users\test\base\catalog.xml</code>, то полный путь до файла равен <code>c:\users\test\1.xml</code>.</p>
-<h2 id="_5">Файл в архиве</h2>
-<p>Файлы библиотеки схем могут храниться в <strong>zip</strong> архиве. Это позволяет, например, упростить доставку схем, когда их десятки/сотни.</p>
-<p>Путь, указывающий на файл в архиве, имеет следующий формат:</p>
-<div class="highlight"><pre><span></span><code>jar:путь_до_архива!путь_до_файла_в_архиве
-</code></pre></div>
-<p>Например <code>jar:common.zip!base/cpp.hrc</code>: файл common.zip в текущей папке и внутри архива base/cpp.hrc.</p>
-<p>При этом путь до архива так же может быть указан любыми описанными тут вариантами.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>jar - исторически оставшийся артефакт из мира Java. Там jar файлы это архивы.</p>
-</div>
-<h2 id="_6">Переменные окружения</h2>
-<p>При указании путей поддерживается использование переменных окружения в формате, поддерживаемым текущей операционной системой. Например,</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="_6-windows" name="__tabbed_2" type="radio" /><input id="_6-linux" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="_6-windows">Windows</label><label for="_6-linux">Linux</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>%COLORER_HOME%\catalog\catalog.xml
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>$COLORER_HOME/catalog/catalog.xml
-$COLORER_HOME$/catalog/catalog.xml
-</code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="xml-external-entity">Пути в xml external entity</h2>
-<p>Запись вида
-<div class="highlight"><pre><span></span><code>&lt;!ENTITY catalog-console SYSTEM &quot;hrd/catalog-console.xml&quot;&gt;
-</code></pre></div>
-в начале xml файла, называется external entity. Строка, указанная после SYSTEM, это путь до файла, который будет в дальнейшем подставлен в текущий вместо <code>&amp;catalog-console;</code>.</p>
-<p>Данный путь так же поддерживает перечисленные выше форматы. Но для переменных окружения есть отличие:</p>
+<p>Этот путь указывает на файл <code>languages/cplusplus.hrc</code>, который находится внутри архива <code>schemes.zip</code>. Если <code>schemes.zip</code> указан без абсолютного пути, он будет искаться относительно базового пути (например, каталога, где находится <code>catalog.xml</code>).</p>
+<p>Сам <code>&lt;путь_к_ZIP_архиву&gt;</code> может быть задан с использованием любого из форматов, описанных в этом разделе (абсолютный, относительный, с переменными окружения).</p>
+<h2 id="_4">Использование переменных окружения</h2>
+<p>Colorer Library поддерживает подстановку значений переменных окружения в путях к файлам и каталогам. Синтаксис зависит от операционной системы:</p>
 <ul>
-<li>переменная окружения вне зависимости от платформы указывается в формате $NAME</li>
-<li>если путь не в формате архива (не используется <code>jar:</code>), то в начале пути необходимо указать <code>env:</code></li>
+<li><strong>Windows</strong>: Переменные указываются в формате <code>%VARIABLE_NAME%</code> (например, <code>%COLORER_HOME%\catalog\catalog.xml</code>).</li>
+<li><strong>Linux/macOS</strong>: Переменные указываются в формате <code>$VARIABLE_NAME</code> или <code>${VARIABLE_NAME}</code> (например, <code>$COLORER_HOME\catalog\catalog.xml</code> или <code>${COLORER_HOME}\catalog\catalog.xml</code>).</li>
 </ul>
+<h2 id="xml-external-entities">Особенности указания путей в XML External Entities</h2>
+<p>При определении внешних XML-сущностей (External Entities) в декларации <code>DOCTYPE</code> XML-файла (например, в catalog.xml), строка, указанная в атрибуте <code>SYSTEM</code>, также интерпретируется как путь к файлу. Например:</p>
+<p><code>&lt;!ENTITY my_include SYSTEM "includes/common_settings.xml"&gt;</code></p>
+<p>Эти пути в целом следуют ранее описанным правилам (абсолютные, относительные, ссылки на архивы), но имеют <strong>важные отличия при использовании переменных окружения</strong>:</p>
+<ol>
+<li><strong>Формат переменных окружения:</strong> Независимо от операционной системы, переменные окружения внутри SYSTEM-идентификатора всегда указываются в формате <code>$VARIABLE_NAME</code> (без <code>{}</code>)</li>
+<li><strong>Префикс <code>env:</code> для путей с переменными окружения (не в архивах):</strong> Если путь содержит переменную окружения и не является путем к файлу внутри архива (т.е. не начинается с <code>jar:</code>), он <strong>должен</strong> начинаться со специального префикса <code>env:</code>. Этот префикс указывает парсеру Colorer, что необходимо произвести подстановку переменных окружения.</li>
+</ol>
 <p>Примеры:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="xml-external-entity-относительный-путь" name="__tabbed_3" type="radio" /><input id="xml-external-entity-архив" name="__tabbed_3" type="radio" /><input id="xml-external-entity-переменные-окружения" name="__tabbed_3" type="radio" /><input id="xml-external-entity-переменные-окружения-и-архив" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="xml-external-entity-относительный-путь">Относительный путь</label><label for="xml-external-entity-архив">Архив</label><label for="xml-external-entity-переменные-окружения">Переменные окружения</label><label for="xml-external-entity-переменные-окружения-и-архив">Переменные окружения и архив</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="xml-external-entities-относительный-путь-стандартно" name="__tabbed_2" type="radio" /><input id="xml-external-entities-файл-в-архиве-стандартно" name="__tabbed_2" type="radio" /><input id="xml-external-entities-переменная-окружения-с-префиксом-env" name="__tabbed_2" type="radio" /><input id="xml-external-entities-переменная-окружения-и-архив-без-префикса-env" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="xml-external-entities-относительный-путь-стандартно">Относительный путь (стандартно)</label><label for="xml-external-entities-файл-в-архиве-стандартно">Файл в архиве (стандартно)</label><label for="xml-external-entities-переменная-окружения-с-префиксом-env">Переменная окружения (с префиксом env:)</label><label for="xml-external-entities-переменная-окружения-и-архив-без-префикса-env">Переменная окружения и архив (без префикса env:)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;!ENTITY catalog-console SYSTEM &quot;hrd/catalog-console.xml&quot;&gt;
+<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;!ENTITY catalog-console SYSTEM &quot;hrd/catalog-console.xml&quot;&gt;</span>
 </code></pre></div>
+Разрешается относительно текущего XML-файла.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;!ENTITY catalog-console SYSTEM &quot;jar:data/common-allpacked.zip!hrd/catalog-console.xml&quot;&gt;
+<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;!ENTITY catalog-console SYSTEM &quot;jar:data/common-allpacked.zip!hrd/catalog-console.xml&quot;&gt;</span>
 </code></pre></div>
+Стандартный синтаксис <code>jar:</code>, путь к архиву <code>data/common-allpacked.zip</code> разрешается относительно текущего XML-файла.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;!ENTITY catalog-console SYSTEM &quot;env:$FARHOME/hrd/catalog-console.xml&quot;&gt;
+<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;!ENTITY catalog-console SYSTEM &quot;env:$FARHOME/hrd/catalog-console.xml&quot;&gt;</span>
 </code></pre></div>
+<code>$FARHOME</code> будет заменено значением переменной окружения. Префикс <code>env:</code> обязателен, так как путь не указывает на архив.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;!ENTITY catalog-console SYSTEM &quot;jar:$FARHOME/data/common-allpacked.zip!hrd/catalog-console.xml&quot;&gt;
+<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;!ENTITY catalog-console SYSTEM &quot;jar:$FARHOME/data/common-allpacked.zip!hrd/catalog-console.xml&quot;&gt;</span>
 </code></pre></div>
+<code>$FARHOME</code> будет заменено значением переменной окружения. Префикс <code>env:</code> не нужен, так как путь уже начинается с <code>jar:</code>, что является достаточным указанием для специальной обработки.</p>
 </div>
 </div>
 </div>
