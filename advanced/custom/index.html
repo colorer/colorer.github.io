@@ -720,6 +720,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hrd-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Добавление новых (пользовательских) HRD-стилей
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Добавление новых (пользовательских) HRD-стилей">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-hrd-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Рекомендуемый способ: Указание каталога с пользовательскими HRD-файлами
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-auto_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Использование специального каталога auto в базовой библиотеке (Менее рекомендуемый)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -887,6 +920,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hrd-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Добавление новых (пользовательских) HRD-стилей
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Добавление новых (пользовательских) HRD-стилей">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-hrd-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Рекомендуемый способ: Указание каталога с пользовательскими HRD-файлами
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-auto_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Использование специального каталога auto в базовой библиотеке (Менее рекомендуемый)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1008,6 +1074,36 @@
 </ol>
 <p>В отличие от правил <code>&lt;filename&gt;</code>/<code>&lt;firstline&gt;</code>, параметры из hrcsettings.xml не заменяют весь блок <code>&lt;parameters&gt;</code> целиком, а <strong>дополняют или обновляют</strong> существующие параметры индивидуально.
 Подробнее о формате hrcsettings.xml см. <a href="../hrcsettings/">в соответствующем разделе документации</a>.</p>
+<h2 id="hrd-">Добавление новых (пользовательских) HRD-стилей</h2>
+<p>Предполагается, что у вас уже есть готовый HRD-файл (или набор HRD-файлов), описывающий цветовой стиль раскраски. Процесс создания самих HRD-стилей здесь не рассматривается.</p>
+<p>Существует несколько способов интегрировать ваши HRD-стили в Colorer:</p>
+<h3 id="1-hrd-">1. Рекомендуемый способ: Указание каталога с пользовательскими HRD-файлами</h3>
+<p>Большинство приложений, использующих Colorer (например, FarColorer), предоставляют в своих настройках возможность указать путь к файлу или каталогу, содержащим ваши пользовательские HRD-файлы. Colorer загрузит стили из указанных источников после загрузки базовой библиотеки.</p>
+<p><strong>Преимущества:</strong></p>
+<ul>
+<li>Полная изоляция от базовой библиотеки, что упрощает её обновление.</li>
+<li>Простота организации пользовательских стилей.</li>
+</ul>
+<p><strong>Как это работает:</strong> </p>
+<ul>
+<li>Если путь указан до каталога, то в нём будут использоваться все файлы с расширением <code>.hrd</code>. В основном элементе <code>&lt;hrd&gt;</code> этого xml файла должны быть заполнены его ключевые атрибуты <code>class</code>, <code>name</code>, <code>description</code>.
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;hrd</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;rgb&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;my-super&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;My new super style&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;def:Text&quot;</span><span class="w"> </span><span class="na">fore=</span><span class="s">&quot;#99EEEE&quot;</span><span class="w"> </span><span class="na">back=</span><span class="s">&quot;#000060&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- и т.д. --&gt;</span>
+<span class="nt">&lt;/hrd&gt;</span>
+</code></pre></div></li>
+<li>Если путь указан на файл, то в нём должны быть указаны определения hrd-стилей с путями до файлов в формате, используемом в <code>catalog.xml</code>.
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;hrd-sets&gt;</span>
+<span class="w">    </span><span class="nt">&lt;hrd</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;rgb&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;my-super&quot;</span><span class="w"> </span><span class="na">description=</span><span class="s">&quot;My new super style&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;location</span><span class="w"> </span><span class="na">link=</span><span class="s">&quot;c:/user/test/super.hrd&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/hrd&gt;</span>
+<span class="nt">&lt;/hrd-sets&gt;</span>
+</code></pre></div></li>
+</ul>
+<h3 id="2-auto_1">2. Использование специального каталога auto в базовой библиотеке (Менее рекомендуемый)</h3>
+<p>Базовая библиотека схем обычно содержит каталог <code>auto</code> (например, <code>/hrc/auto/</code> или <code>/auto/</code> относительно <code>catalog.xml</code>), предназначенный для пользовательских дополнений. Схемы из этого каталога загружаются после основных схем базовой библиотеки (если порядок загрузки в <code>catalog.xml</code> не изменён).</p>
 
 
 
